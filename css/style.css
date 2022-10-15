@@ -1,0 +1,108 @@
+:root{
+    --letra-color: rgba(0, 0, 0, 0.5);
+    --fondo-container: #F6FBF9;
+    --boton-color: #84C7AE;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    background: url('../img/fondo.png');
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 110px 0 53px 0;
+    width: 70%;
+    height: 485px;
+    border-radius: 49px;
+    background-color: var(--fondo-container);
+    row-gap: 47px;
+}
+
+.titulo {
+    display: flex;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.titulo img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 39px;
+    bottom: 10px;
+}
+
+.coloca-correos {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    flex-wrap: wrap;
+}
+
+.coloca-correos p {
+    font-weight: lighter;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.coloca-correos textarea {
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    width: 269px;
+    height: 32px;
+    vertical-align: top;
+    line-height: 25px;
+}
+
+.dia-reporte p {
+    font-weight: lighter;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.dia-reporte textarea{
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    width: 269px;
+    height: 32px;
+    vertical-align: top;
+    line-height: 25px;
+}
+
+.buttonenviar {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    width: 250px;
+    height: 50px;
+    border-style: none;
+    background-color: var(--boton-color);
+    border-radius: 13px;
+    margin-top: 21px;
+    margin-left: 15px;
+}

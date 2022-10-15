@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Correo Personalizado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="todo">
+        <div class="container">
+            <div class="titulo">
+                <h1>Automatizador de Correos a Provida</h1>
+                <img src="img/provida-removebg-preview.png" alt="provida">
+            </div>
+            <form name="formulario-contacto" class="formulario">
+                <div class="coloca-correos">
+                    <p>Enviar a los siguientes correos:</p>
+                    <textarea id="tomail1" name="tomail1" rows="1" cols="30">teresa.broncano@smprovida.com</textarea><br>
+                    <textarea id="tomail2" name="tomail2" rows="1" cols="30">ismenia.alberco@smprovida.com</textarea><br>
+                    <textarea id="tomail3" name="tomail3" rows="1" cols="30">recursos.humanos@smprovida.com</textarea><br>
+                </div>
+                <div class="dia-reporte">
+                    <p>Inserta aqui el dia del Reporte</p>
+                    <textarea id="diareporte" name="diareporte" rows="1" cols="30">11/10/2022</textarea><br>
+                </div>
+                <p><input class="buttonenviar" id="enviarCorreo" type="submit" value="Enviar por Hotmail"/>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const btnEnvio = document.getElementById('enviarCorreo');
+
+        btnEnvio.addEventListener('click', function(e) {
+            const email1 = document.getElementById('tomail1').value;
+            const email2 = document.getElementById('tomail2').value;
+            const email3 = document.getElementById('tomail3').value;
+            const diaReporte = document.getElementById('diareporte').value;
+
+            const subject = `Status de trabajo ${diaReporte}`;
+            const body = `Remito%20el%20estatus%20del%20trabajo%20realizado%20del%20d%C3%ADa%20${diaReporte}%0D%0A%0D%0ASin%20m%C3%A1s%20que%20informar%20me%20despido%20de%20usted.%0D%0A%0D%0ASaludos%20Cordiales.%0D%0AJuan%20Manrique`;
+
+            window.location.href = `mailto:${email1},${email2},${email3}?subject=${subject}&body=${body}`;
+        });
+    </script>
+
+</body>
+</html>
